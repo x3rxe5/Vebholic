@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import formJSON from './dummy_payload.json';
+import { useState, useEffect } from 'react';
+
+import Elements from './components/Elements';
+//import { FormContext } from './FormContext';s
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [elements,setElements] = useState({});
+  let arr = formJSON[0].field;
+
+  useEffect(() => {
+    setElements(formJSON[0].field);
+  },[formJSON])
+
+  const handleSubmit = () => {
+
+  }
+
+  return(
+    <>
+    <form>
+      <h1>{formJSON.name}</h1>
+      {
+        arr.map((e,i) => {
+          return <Elements key={i} fieldData={e.fieldData}/>
+          // return console.log("Field data => ",);
+        })
+      }
+      <button type="submit" className="btn btn-primary" onClick={(e) => handleSubmit(e)}>Submit</button>
+      </form>
+    </>
+  )
+
 }
+
+
+
 
 export default App;
