@@ -44,8 +44,6 @@ function BrandInformation({ fieldData:{fieldLabel,type,option}  }) {
         <FormControlLabel
         control={
           <Checkbox
-            // checked={}
-            // onChange={}
             name="checkedB"
             color="primary"
           />
@@ -68,29 +66,6 @@ function BrandInformation({ fieldData:{fieldLabel,type,option}  }) {
   }
 
 
-//   return(
-//   <div>
-//   {fieldData.type === "singleLine" && <TextField label="Outlined" variant="outlined" />}
-//   {fieldData.type === "multiLine" && <TextField multiline label="Outlined" variant="outlined" />}
-
-//   {fieldData.type === "dropDown" && (
-//     <FormControl  variant="outlined" className="dropdown">
-//       <InputLabel id="demo-simple-select-outlined-label">{fieldData.fieldLabel}</InputLabel>
-//       <Select
-//         labelId="demo-simple-select-outlined-label"
-//         id="demo-simple-select-outlined"
-//         value={fieldData.fieldLabel}
-//       //   onChange={handleChange}
-//         label="Age"
-//       >
-//        {fieldData.option.map((e, i)=>{
-//           return <MenuItem value={e.optionLabel}>Ten</MenuItem>
-//        })}
-//       </Select>
-//     </FormControl>
-//     )}
-//   </div>
-// )
 }
 
 export default BrandInformation

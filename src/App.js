@@ -1,23 +1,18 @@
 import formJSON from './dummy_payload.json';
-import { useState, useEffect } from 'react';
+
 import './App.css'
-import LabelVal from "./LabelVal";
+
 import Elements from './components/Elements';
 import { Button } from "@material-ui/core"
-import { FormControlLabel } from '@material-ui/core';
-//import { FormContext } from './FormContext';
+
+
 
 function App() {
-  const [elements,setElements] = useState({});
+
   let arr = formJSON[0].field;
 
-  useEffect(() => {
-    setElements(formJSON[0].field);
-  },[formJSON])
 
-  const handleSubmit = () => {
 
-  }
   let field = arr;
   const len = arr.length;
   let obj = {}
@@ -57,19 +52,13 @@ function App() {
                   return  <Elements key={i} fieldData={ee.fieldData} len={len} field={arr}/>
                 }
                 })
-              // return console.log("Field data => ",);
+
             }
 
           </>
           )
         })
       }`
-        {/* {
-          arr2.forEach((e,i) => {
-            return <LabelVal e={e} key={i} />
-          })
-        } */}
-
       <Button variant="contained" color="primary">
         Send
       </Button>
