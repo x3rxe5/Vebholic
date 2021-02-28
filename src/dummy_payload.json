@@ -85,6 +85,11 @@
 				"option": [
 					{
 						"optionLabel": "English",
+						"order": 2,
+						"default": true
+					},
+					{
+						"optionLabel": "Hindi",
 						"order": 1,
 						"default": true
 					}

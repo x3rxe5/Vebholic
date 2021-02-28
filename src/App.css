@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app form{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+
+    min-width: 500px;
+    background: lightgrey;
+}
+.dropdown{
+    min-width: 300px;
+}
+
